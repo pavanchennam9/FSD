@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" 
+content="width=device-width, initialscale=1.0">
+ <title>Pseudo Element Selector 
+Example</title>
+ <style>
+ .example::before {
+ content: "Before: ";
+ color: blue;
+ }
+ .example::after {
+ content: " :After";
+ color: green;
+ }
+ .highlight::first-letter {
+ font-size: 2em;
+ color: red;
+ }
+ </style>
+</head>
+<body>
+ <h1>Pseudo Element Selector Example</h1>
+ <p class="example">This is an example 
+paragraph demonstrating the use of pseudoelements.</p>
+ <p class="highlight">This paragraph uses 
+the ::first-letter pseudo-element to style the first 
+letter.</p>
+</body>
+</html>
+ The ::before pseudo-element is used to insert content before the content of the selected 
+element. In this case, it adds "Before: " before the paragraph with the class example.
+ The ::after pseudo-element is used to insert content after the content of the selected 
+element. In this case, it adds " :After" after the paragraph with the class example.
+ The ::first-letter pseudo-element is used to style the first letter of the selected 
+element. Here, it enlarges and changes the color of the first letter of the paragraph with the 
+class highlight.
+4.v) Attribute selector.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" 
+content="width=device-width, initialscale=1.0">
+ <title>Attribute Selector Example</title>
+ <style>
+ /* Selects all elements with a title attribute 
+*/
+ [title] {
+ color: blue;
+ font-weight: bold;
+ }
+ /* Selects all elements with a title attribute 
+equal to 'tooltip' */
+ [title="tooltip"] {
+ text-decoration: underline;
+ }
+ /* Selects all input elements with a type 
+attribute equal to 'text' */
+ input[type="text"] {
+ border: 2px solid green;
+ padding: 5px;
+ }
+ /* Selects all links (a elements) where the 
+href attribute starts with 'https' */
+ a[href^="https"] {
+ color: red;
+ }
+ /* Selects all links (a elements) where the 
+href attribute ends with '.org' */
+ a[href$=".org"] {
+ color: orange;
+ }
+ /* Selects all links (a elements) where the 
+href attribute contains 'example' */
+ a[href*="example"] {
+ font-weight: bold;
+ }
+ </style>
+</head>
+<body>
+ <h1>Attribute Selector Example</h1>
+ <p title="tooltip">This paragraph has a title 
+attribute with the value 'tooltip'.</p>
+ <p title="info">This paragraph has a title 
+attribute with the value 'info'.</p>
+<input type="text" placeholder="Type here...">
+<input type="password" placeholder="Password">
+ <p>Check out these links:</p>
+ <a 
+href="https://www.example.com">Example 
+Secure Link</a><br>
+ <a href="http://www.example.org">Example 
+Organization Link</a><br>
+ <a href="https://www.sample.org">Sample 
+Secure Organization Link</a>
+</body>
+</html>
